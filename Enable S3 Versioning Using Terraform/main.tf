@@ -1,0 +1,15 @@
+resource "aws_s3_bucket" "s3_ran_bucket" {
+  bucket = "xfusion-s3-16250"
+  acl    = "private"
+
+  tags = {
+    Name        = "xfusion-s3-16250"
+  }
+}
+
+resource "aws_s3_bucket_versioning" "versioning_example" {
+  bucket = aws_s3_bucket.s3_ran_bucket.id
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
