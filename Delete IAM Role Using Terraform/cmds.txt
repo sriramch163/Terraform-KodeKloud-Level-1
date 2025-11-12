@@ -1,0 +1,2 @@
+terraform state list
+terraform destroy -target=aws_iam_role.role
