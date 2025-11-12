@@ -1,0 +1,4 @@
+terraform state list
+terraform show | grep "Name"
+terraform destroy -target=aws_instance.ec2
+terraform state list
